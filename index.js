@@ -24,9 +24,9 @@ module.exports = {
   treeForPublic(tree) {
     var packageRoot = path.dirname(resolve.sync('@shopify/polaris/package.json', { basedir: __dirname }));
     var polarisSvgFiles = new Funnel(packageRoot, {
-      include: ['/**/*.svg'],
+      include: ['src/**/*.svg'],
       srcDir: './',
-      destDir: 'ember-polaris/svg-icons',
+      destDir: 'ember-polaris-svg-icons',
       annotation: 'PolarisSvgFunnel'
     });
 
