@@ -8,9 +8,18 @@ module.exports = {
     // (since that doesn't actually matter to us)
   },
 
+  included(app) {
+    this._super.included.apply(this, arguments);
+console.log(app.options);
+    this.options = app.options['ember-polaris'];
+  },
+
   afterInstall: function(/* options */) {
-    return this.addPackagesToProject([
-      { name: 'ember-cli-sass', target: 'latest' }
-    ]);
+// console.log('\n\n***\n');
+// console.log(this.options);
+// console.log('\n***\n\n');
+    // return this.addPackagesToProject([
+    //   { name: 'ember-cli-sass', target: 'latest' }
+    // ]);
   }
 };

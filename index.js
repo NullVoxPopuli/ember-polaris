@@ -21,6 +21,18 @@ module.exports = {
     return this._super.treeForStyles(mergeTrees([polarisScssFiles, tree], { overwrite: true }));
   },
 
+  treeForPublic(tree) {
+    var packageRoot = path.dirname(resolve.sync('@shopify/polaris/package.json', { basedir: __dirname }));
+    var polarisSvgFiles = new Funnel(packageRoot, {
+      include: ['/**/*.svg'],
+      srcDir: './',
+      destDir: 'ember-polaris/svg-icons',
+      annotation: 'PolarisSvgFunnel'
+    });
+
+    return this._super.treeForPublic(mergeTrees([polarisSvgFiles, tree], { overwrite: true }));
+  },
+
   // TODO remove this once shipping to prod
   isDevelopingAddon() {
     return true;
