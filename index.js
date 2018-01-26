@@ -21,16 +21,23 @@ module.exports = {
     return this._super.treeForStyles(mergeTrees([polarisScssFiles, tree], { overwrite: true }));
   },
 
-  treeForPublic(tree) {
+  treeForPublic() {
     var packageRoot = path.dirname(resolve.sync('@shopify/polaris/package.json', { basedir: __dirname }));
+
     var polarisSvgFiles = new Funnel(packageRoot, {
-      include: ['src/**/*.svg'],
-      srcDir: './',
+      include: ['**/*.svg'],
+      srcDir: './src',
       destDir: 'ember-polaris-svg-icons',
       annotation: 'PolarisSvgFunnel'
     });
 
-    return this._super.treeForPublic(mergeTrees([polarisSvgFiles, tree], { overwrite: true }));
+    var superTree = this._super.treeForPublic.apply(this, arguments);
+    var trees = [ polarisSvgFiles ];
+    if (superTree) {
+      trees.push(superTree);
+    }
+
+    return mergeTrees(trees, { overwrite: true });
   },
 
   // TODO remove this once shipping to prod
