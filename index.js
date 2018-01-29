@@ -22,20 +22,23 @@ module.exports = {
   },
 
   treeForPublic() {
-    var packageRoot = path.dirname(resolve.sync('@shopify/polaris/package.json', { basedir: __dirname }));
-
-    var polarisSvgFiles = new Funnel(packageRoot, {
-      include: ['**/*.svg'],
-      srcDir: './src',
-      destDir: 'ember-polaris-svg-icons',
-      annotation: 'PolarisSvgFunnel'
-    });
+    var trees = [];
 
     var superTree = this._super.treeForPublic.apply(this, arguments);
-    var trees = [ polarisSvgFiles ];
     if (superTree) {
       trees.push(superTree);
     }
+
+    var packageRoot = path.dirname(resolve.sync('@shopify/polaris/package.json', { basedir: __dirname }));
+    var destDir = 'images/svg/polaris';
+    var polarisSvgFiles = new Funnel(packageRoot, {
+      include: ['**/*.svg'],
+      srcDir: './src',
+      destDir: destDir,
+      annotation: 'PolarisSvgFunnel'
+    });
+
+    trees.push(polarisSvgFiles);
 
     return mergeTrees(trees, { overwrite: true });
   },
