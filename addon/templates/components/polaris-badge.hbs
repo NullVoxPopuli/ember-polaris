@@ -1,7 +1,11 @@
-{{#if hasStatus}}
-  {{#polaris-visually-hidden}}
-    {{statusDescription}}
-  {{/polaris-visually-hidden}}
+{{#if statusDescription}}
+  {{polaris-visually-hidden text=statusDescription}}
+{{/if}}
+
+{{#if progressDescription}}
+  <span class="Polaris-Badge__Pip">
+    {{polaris-visually-hidden text=progressDescription}}
+  </span>
 {{/if}}
 
 {{#if hasBlock}}

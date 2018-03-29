@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { guidFor } from '@ember/object/internals';
 import { typeOf } from '@ember/utils';
+import { equal } from '@ember/object/computed';
 import layout from '../templates/components/polaris-checkbox';
 
 /**
@@ -14,33 +15,43 @@ export default Component.extend({
 
   layout,
 
-  /*
-   * Public attributes.
-   */
   /**
    * Label for the checkbox
    *
    * @property label
-   * @type {string}
+   * @type {String}
    * @default null
+   * @public
    */
   label: null,
+
+  /**
+   * Component to render for the checkbox's label
+   *
+   * @property labelComponent
+   * @type {String | Component}
+   * @default null
+   * @public
+   */
+  labelComponent: null,
 
   /**
    * Visually hide the label
    *
    * @property labelHidden
-   * @type {boolean}
+   * @type {Boolean}
    * @default false
+   * @public
    */
   labelHidden: false,
 
   /**
-   * Checkbox is selected
+   * Checkbox is selected. `indeterminate` shows a horizontal line in the checkbox
    *
    * @property checked
-   * @type {boolean}
+   * @type {Boolean/String}
    * @default false
+   * @public
    */
   checked: false,
 
@@ -48,8 +59,9 @@ export default Component.extend({
    * Additional text to aide in use
    *
    * @property helpText
-   * @type {string}
+   * @type {String}
    * @default null
+   * @public
    */
   helpText: null,
 
@@ -57,8 +69,9 @@ export default Component.extend({
    * ID for form input
    *
    * @property inputId
-   * @type {string}
+   * @type {String}
    * @default null
+   * @public
    */
   inputId: null,
 
@@ -66,8 +79,9 @@ export default Component.extend({
    * Name for form input
    *
    * @property name
-   * @type {string}
+   * @type {String}
    * @default null
+   * @public
    */
   name: null,
 
@@ -75,8 +89,9 @@ export default Component.extend({
    * Value for form input
    *
    * @property value
-   * @type {string}
+   * @type {String}
    * @default null
+   * @public
    */
   value: null,
 
@@ -84,8 +99,9 @@ export default Component.extend({
    * Display an error state
    *
    * @property error
-   * @type {string}
+   * @type {String}
    * @default null
+   * @public
    */
   error: null,
 
@@ -93,8 +109,9 @@ export default Component.extend({
    * Disable the checkbox
    *
    * @property disabled
-   * @type {boolean}
+   * @type {Boolean}
    * @default false
+   * @public
    */
   disabled: false,
 
@@ -104,6 +121,7 @@ export default Component.extend({
    * @property onChange
    * @type {function}
    * @default noop
+   * @public
    */
   onChange() {},
 
@@ -113,6 +131,7 @@ export default Component.extend({
    * @property onFocus
    * @type {function}
    * @default noop
+   * @public
    */
   onFocus() {},
 
@@ -122,12 +141,33 @@ export default Component.extend({
    * @property onBlur
    * @type {function}
    * @default noop
+   * @public
    */
   onBlur() {},
 
   /*
    * Internal properties.
    */
+  isIndeterminate: equal('checked', 'indeterminate').readOnly(),
+
+  isChecked: computed('isIndeterminate', 'checked', function() {
+    return !this.get('isIndeterminate') && Boolean(this.get('checked'));
+  }).readOnly(),
+
+  checkedState: computed('isIndeterminate', 'isChecked', function() {
+    return this.get('isIndeterminate') ? 'mixed' : `${ this.get('isChecked') }`;
+  }).readOnly(),
+
+  checkboxClasses: computed('isIndeterminate', function() {
+    let classNames = ['Polaris-Checkbox__Input'];
+
+    if (this.get('isIndeterminate')) {
+      classNames.push('Polaris-Checkbox__Input--indeterminate');
+    }
+
+    return classNames.join(' ');
+  }).readOnly(),
+
   _id: computed('inputId', function() {
     return this.get('inputId') || `polaris-checkbox-${ guidFor(this) }`;
   }).readOnly(),

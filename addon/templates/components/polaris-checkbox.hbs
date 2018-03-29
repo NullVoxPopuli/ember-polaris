@@ -1,6 +1,7 @@
 {{#polaris-choice
   inputId=_id
   label=label
+  labelComponent=labelComponent
   labelHidden=labelHidden
   helpText=helpText
   error=error
@@ -10,11 +11,13 @@
       id=_id
       name=name
       value=value
-      checked=checked
+      checked=isChecked
       disabled=disabled
-      class="Polaris-Checkbox__Input"
+      class=checkboxClasses
+      aria-checked=checkedState
       aria-invalid=(if error "true" "false")
       aria-describedby=describedBy
+      indeterminate=(if isIndeterminate "true")
       update=(action onChange)
       focusIn=(action onFocus)
       focusOut=(action onBlur)
@@ -23,7 +26,7 @@
     <div class="Polaris-Checkbox__Backdrop"></div>
 
     <div class="Polaris-Checkbox__Icon">
-      {{polaris-icon source="checkmark"}}
+      {{polaris-icon source=(if isIndeterminate "subtract" "checkmark")}}
     </div>
   </div>
 {{/polaris-choice}}
