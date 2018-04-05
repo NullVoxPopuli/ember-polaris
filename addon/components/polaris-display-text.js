@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { classify } from '@ember/string';
 import layout from '../templates/components/polaris-display-text';
 
-/**
+/*
  * Polaris display text component.
  * See https://polaris.shopify.com/components/titles-and-text/display-text
  *
@@ -24,10 +24,10 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Public attributes.
    */
-  /**
+  /*
    * Size of the text
    *
    * @property size
@@ -36,7 +36,7 @@ export default Component.extend({
    */
   size: 'medium',
 
-  /**
+  /*
    * Content to display
    *
    * This component can be used in block form,
@@ -49,7 +49,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Computed properties.
    */
   sizeClassName: computed('size', function() {

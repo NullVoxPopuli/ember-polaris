@@ -8,7 +8,7 @@ const allowedSpacings = [
   'loose'
 ];
 
-/**
+/*
  * Undocumented Polaris text container component.
  */
 export default Component.extend({
@@ -20,7 +20,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The text to display.
    *
    * This component can be used in block form,
@@ -33,7 +33,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * The amount of vertical spacing children will get between them.
    *
    * @property spacing

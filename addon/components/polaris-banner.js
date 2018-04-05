@@ -55,7 +55,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Title content for the banner.
    *
    * @property title
@@ -64,7 +64,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Icon to display in the banner.
    *
    * @property icon
@@ -73,7 +73,7 @@ export default Component.extend({
    */
   icon: null,
 
-  /**
+  /*
    * Sets the status of the banner.
    *
    * @property status
@@ -82,7 +82,7 @@ export default Component.extend({
    */
   status: null,
 
-  /**
+  /*
    * Action for banner.
    *
    * @property action
@@ -91,7 +91,7 @@ export default Component.extend({
    */
   action: null,
 
-  /**
+  /*
    * Displays a secondary action.
    *
    * @property secondaryAction
@@ -100,7 +100,7 @@ export default Component.extend({
    */
   secondaryAction: null,
 
-  /**
+  /*
    * Callback when banner is dismissed
    *
    * @property onDismiss
@@ -164,7 +164,7 @@ export default Component.extend({
     return `Polaris-Banner--status${ capitalize(status) }`;
   }).readOnly(),
 
-  /**
+  /*
    * Lifecycle hooks.
    */
   didRender() {

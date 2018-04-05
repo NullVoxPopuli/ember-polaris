@@ -10,7 +10,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Elements to display inside group item
    *
    * @property text
@@ -19,7 +19,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Use a plain style for the group item
    *
    * @property plain

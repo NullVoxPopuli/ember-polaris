@@ -8,7 +8,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Collection of breadcrumbs
    *
    * @property breadcrumbs
@@ -18,7 +18,7 @@ export default Component.extend({
    */
   breadcrumbs: null,
 
-  /**
+  /*
    * Role attribute
    *
    * @property role
@@ -28,7 +28,7 @@ export default Component.extend({
    */
   role: 'navigation',
 
-  /**
+  /*
    * The breadcrumb to render (the last of the list)
    * We're not always guaranteed to get an Ember array,
    * so we can't just use `breadcrumbs.lastObject` in the template.

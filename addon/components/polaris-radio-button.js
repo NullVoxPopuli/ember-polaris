@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { guidFor } from '@ember/object/internals';
 import layout from '../templates/components/polaris-radio-button';
 
-/**
+/*
  * Polaris radio button component.
  * See https://polaris.shopify.com/components/forms/radio-button
  */
@@ -16,7 +16,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Label for the radio button
    *
    * @property label
@@ -25,7 +25,7 @@ export default Component.extend({
    */
   label: null,
 
-  /**
+  /*
    * Visually hide the label
    *
    * @property labelHidden
@@ -34,7 +34,7 @@ export default Component.extend({
    */
   labelHidden: false,
 
-  /**
+  /*
    * Radio button is selected
    *
    * @property checked
@@ -43,7 +43,7 @@ export default Component.extend({
    */
   checked: false,
 
-  /**
+  /*
    * Additional text to aid in use
    *
    * @property helpText
@@ -52,7 +52,7 @@ export default Component.extend({
    */
   helpText: null,
 
-  /**
+  /*
   * ID for form input
   *
    * @property inputId
@@ -61,7 +61,7 @@ export default Component.extend({
    */
   inputId: null,
 
-  /**
+  /*
    * Name for form input
    *
    * @property name
@@ -70,7 +70,7 @@ export default Component.extend({
    */
   name: null,
 
-  /**
+  /*
    * Value for form input
    *
    * @property value
@@ -79,7 +79,7 @@ export default Component.extend({
    */
   value: null,
 
-  /**
+  /*
    * Disable the radio button
    *
    * @property disabled
@@ -88,7 +88,7 @@ export default Component.extend({
    */
   disabled: false,
 
-  /**
+  /*
    * Callback when radio button is toggled
    *
    * @property onChange
@@ -97,7 +97,7 @@ export default Component.extend({
    */
   onChange() {},
 
-  /**
+  /*
    * Callback when radio button is focussed
    *
    * @property onFocus
@@ -106,7 +106,7 @@ export default Component.extend({
    */
   onFocus() {},
 
-  /**
+  /*
    * Callback when focus is removed
    *
    * @property onBlur

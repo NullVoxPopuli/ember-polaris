@@ -12,7 +12,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Title for the section
    *
    * @property title
@@ -21,7 +21,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * A less prominent section
    *
    * @property subdued
@@ -30,7 +30,7 @@ export default Component.extend({
    */
   subdued: false,
 
-  /**
+  /*
    * Inner content of the section
    *
    * This component can be used in block form,

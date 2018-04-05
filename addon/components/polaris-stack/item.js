@@ -10,7 +10,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Elements to display inside stack item
    *
    * @property text
@@ -19,7 +19,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Fill the width of the stack
    *
    * @property fill

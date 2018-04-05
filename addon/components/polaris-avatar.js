@@ -48,7 +48,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Size of avatar
    *
    * @property size
@@ -57,7 +57,7 @@ export default Component.extend({
    */
   size: defaultSize,
 
-  /**
+  /*
    * The name of the person
    *
    * @property name
@@ -66,7 +66,7 @@ export default Component.extend({
    */
   name: null,
 
-  /**
+  /*
    * Initials of person to display
    *
    * @property initials
@@ -76,7 +76,7 @@ export default Component.extend({
    */
   initials: null,
 
-  /**
+  /*
    * Whether the avatar is for a customer
    *
    * @property customer
@@ -86,7 +86,7 @@ export default Component.extend({
    */
   customer: false,
 
-  /**
+  /*
    * URL of the avatar image
    *
    * @property source
@@ -96,7 +96,7 @@ export default Component.extend({
    */
   source: null,
 
-  /**
+  /*
    * Accessible label for the avatar image
    *
    * @property accessibilityLabel
@@ -106,7 +106,7 @@ export default Component.extend({
    */
   accessibilityLabel: null,
 
-  /**
+  /*
    * Path to the Polaris avatar images
    * TODO: read this from config? Need a way to set this by default?
    * @property avatarSourcePath
@@ -115,7 +115,7 @@ export default Component.extend({
    */
   avatarSourcePath: '',
 
-  /**
+  /*
    * Role attribute value
    * @property role
    * @private
@@ -123,7 +123,7 @@ export default Component.extend({
    */
   role: 'img',
 
-  /**
+  /*
    * Image source to use (if any)
    * @property finalSource
    * @private
@@ -131,7 +131,7 @@ export default Component.extend({
    */
   finalSource: or('source', 'customerImageSource').readOnly(),
 
-  /**
+  /*
    * Name to use (if any)
    * @property finalName
    * @private
@@ -139,7 +139,7 @@ export default Component.extend({
    */
   finalName: or('name', 'initials').readOnly(),
 
-  /**
+  /*
    * Accessibility label to apply to avatar
    * @property label
    * @private
@@ -163,7 +163,7 @@ export default Component.extend({
     return 'Avatar';
   }).readOnly(),
 
-  /**
+  /*
    * Class name to set avatar style
    * @property styleClass
    * @private
@@ -177,7 +177,7 @@ export default Component.extend({
     return `Polaris-Avatar--style${ classify(style) }`;
   }).readOnly(),
 
-  /**
+  /*
    * Class name to set avatar size
    * @property sizeClass
    * @private
@@ -192,7 +192,7 @@ export default Component.extend({
     return `Polaris-Avatar--size${ classify(size) }`;
   }).readOnly(),
 
-  /**
+  /*
    * Image source when displaying a customer avatar
    * @property customerImageSource
    * @private

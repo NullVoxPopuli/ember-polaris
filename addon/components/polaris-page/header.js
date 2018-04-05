@@ -14,7 +14,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Page title, in large type
    *
    * @property title
@@ -24,7 +24,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Visually hide the title
    *
    * @property titleHidden
@@ -34,7 +34,7 @@ export default Component.extend({
    */
   titleHidden: false,
 
-  /**
+  /*
    * App icon, for pages that are part of Shopify apps
    *
    * @property icon
@@ -45,7 +45,7 @@ export default Component.extend({
    */
   icon: null,
 
-  /**
+  /*
    * Collection of breadcrumbs
    *
    * @property breadcrumbs
@@ -55,7 +55,7 @@ export default Component.extend({
    */
   breadcrumbs: null,
 
-  /**
+  /*
    * Adds a border to the bottom of the page header
    *
    * @property separator
@@ -65,7 +65,7 @@ export default Component.extend({
    */
   separator: false,
 
-  /**
+  /*
    * Collection of secondary page-level actions
    *
    * @property secondaryActions
@@ -75,7 +75,7 @@ export default Component.extend({
    */
   secondaryActions: null,
 
-  /**
+  /*
    * Primary page-level action
    *
    * @property primaryAction
@@ -85,7 +85,7 @@ export default Component.extend({
    */
   primaryAction: null,
 
-  /**
+  /*
    * Page-level pagination
    *
    * @property pagination
@@ -96,7 +96,7 @@ export default Component.extend({
    */
   pagination: null,
 
-  /**
+  /*
    * Computed properties.
    */
   hasBreadcrumbs: gt('breadcrumbs.length', 0).readOnly(),

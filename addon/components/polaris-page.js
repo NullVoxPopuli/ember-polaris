@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { or } from '@ember/object/computed';
 import layout from '../templates/components/polaris-page';
 
-/**
+/*
  * Polaris page component.
  * See https://polaris.shopify.com/components/structure/page
  */
@@ -15,7 +15,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Page title, in large type
    *
    * @property title
@@ -25,7 +25,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Visually hide the title
    *
    * @property titleHidden
@@ -35,7 +35,7 @@ export default Component.extend({
    */
   titleHidden: false,
 
-  /**
+  /*
    * App icon, for pages that are part of Shopify apps
    *
    * @property icon
@@ -46,7 +46,7 @@ export default Component.extend({
    */
   icon: null,
 
-  /**
+  /*
    * Collection of breadcrumbs
    *
    * @property breadcrumbs
@@ -56,7 +56,7 @@ export default Component.extend({
    */
   breadcrumbs: null,
 
-  /**
+  /*
    * The contents of the page
    *
    * This component can be used in block form,
@@ -70,7 +70,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Remove the normal max-width on the page
    *
    * @property fullWidth
@@ -80,7 +80,7 @@ export default Component.extend({
    */
   fullWidth: false,
 
-  /**
+  /*
    * Decreases the maximum layout width. Intended for single-column layouts
    *
    * @property singleColumn
@@ -90,7 +90,7 @@ export default Component.extend({
    */
   singleColumn: false,
 
-  /**
+  /*
    * Adds a border to the bottom of the page header
    *
    * @property separator
@@ -100,7 +100,7 @@ export default Component.extend({
    */
   separator: false,
 
-  /**
+  /*
    * Collection of secondary page-level actions
    *
    * @property secondaryActions
@@ -110,7 +110,7 @@ export default Component.extend({
    */
   secondaryActions: null,
 
-  /**
+  /*
    * Collection of page-level groups of secondary actions
    *
    * @property actionGroups
@@ -121,7 +121,7 @@ export default Component.extend({
    */
   actionGroups: null,
 
-  /**
+  /*
    * Primary page-level action
    *
    * @property primaryAction
@@ -131,7 +131,7 @@ export default Component.extend({
    */
   primaryAction: null,
 
-  /**
+  /*
    * Page-level pagination
    *
    * @property pagination
@@ -142,7 +142,7 @@ export default Component.extend({
    */
   pagination: null,
 
-  /**
+  /*
    * Computed properties.
    */
   hasHeaderContent: or('title', 'primaryAction', 'secondaryActions', 'breadcrumbs').readOnly(),

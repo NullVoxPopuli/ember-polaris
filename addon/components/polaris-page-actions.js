@@ -4,7 +4,7 @@ import { isArray } from '@ember/array';
 import { invokeAction } from 'ember-invoke-action';
 import layout from '../templates/components/polaris-page-actions';
 
-/**
+/*
  * Polaris page actions component.
  * See https://polaris.shopify.com/components/structure/page-actions
  */
@@ -16,7 +16,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The primary action for the page
    *
    * @property primaryAction
@@ -25,7 +25,7 @@ export default Component.extend({
    */
   primaryAction: null,
 
-  /**
+  /*
    * The secondary actions for the page
    *
    * @property secondaryActions

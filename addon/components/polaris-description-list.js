@@ -7,7 +7,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Collection of items for list
    *
    * format with `term` and `description` keys:

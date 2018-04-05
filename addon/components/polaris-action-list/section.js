@@ -7,7 +7,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Collection of action items
    *
    * @property section
@@ -17,7 +17,7 @@ export default Component.extend({
    */
   section: null,
 
-  /**
+  /*
    * Whether the parent action list has multiple sections
    *
    * @property hasMultipleSections

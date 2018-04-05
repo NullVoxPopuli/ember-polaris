@@ -15,7 +15,7 @@ const CheckedChoice = ObjectProxy.extend({
   }).readOnly(),
 });
 
-/**
+/*
  * Polaris choice list component.
  * See https://polaris.shopify.com/components/forms/choice-list
  */
@@ -26,7 +26,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Label for list of choices
    *
    * @property title
@@ -36,7 +36,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Collection of choices
    *
    * Each choice can have these properties:
@@ -54,7 +54,7 @@ export default Component.extend({
    */
   choices: null,
 
-  /**
+  /*
    * Collection of selected choices
    *
    * @property selected
@@ -64,7 +64,7 @@ export default Component.extend({
    */
   selected: null,
 
-  /**
+  /*
    * Name for form input
    *
    * @property name
@@ -74,7 +74,7 @@ export default Component.extend({
    */
   name: null,
 
-  /**
+  /*
    * Allow multiple selections
    *
    * @property allowMultiple
@@ -84,7 +84,7 @@ export default Component.extend({
    */
   allowMultiple: false,
 
-  /**
+  /*
    * Toggles display of the title
    *
    * @property titleHidden
@@ -94,7 +94,7 @@ export default Component.extend({
    */
   titleHidden: false,
 
-  /**
+  /*
    * Callback when the selected choices change
    *
    * @property onChange

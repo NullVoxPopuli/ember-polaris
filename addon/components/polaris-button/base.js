@@ -48,7 +48,7 @@ export default Component.extend({
    */
   iconOnly: false,
 
-  /**
+  /*
    * Action handlers.
    */
   click: mapEventToAction('onClick'),

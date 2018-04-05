@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { or } from '@ember/object/computed';
 import layout from '../templates/components/polaris-choice';
 
-/**
+/*
  * Polaris choice component.
  * Wrapper for checkbox and radiobutton components.
  */
@@ -13,7 +13,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * ID of the choice's input
    *
    * @property inputId
@@ -23,7 +23,7 @@ export default Component.extend({
    */
   inputId: null,
 
-  /**
+  /*
    * Label content for the choice
    *
    * @property label
@@ -33,7 +33,7 @@ export default Component.extend({
    */
   label: null,
 
-  /**
+  /*
    * Component to render for the choice's label
    *
    * @property labelComponent
@@ -43,7 +43,7 @@ export default Component.extend({
    */
   labelComponent: null,
 
-  /**
+  /*
    * Error content for this choice
    *
    * @property error
@@ -53,7 +53,7 @@ export default Component.extend({
    */
   error: null,
 
-  /**
+  /*
    * Flag to hide the label for this choice
    *
    * @property labelHidden
@@ -63,7 +63,7 @@ export default Component.extend({
    */
   labelHidden: false,
 
-  /**
+  /*
    * Help text for this choice
    *
    * @property helpText

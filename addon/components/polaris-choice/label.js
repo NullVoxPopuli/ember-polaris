@@ -9,7 +9,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * ID of the input this label is for.
    *
    * @property inputId
@@ -19,7 +19,7 @@ export default Component.extend({
    */
   inputId: null,
 
-  /**
+  /*
    * Label content for the choice this label belongs to.
    *
    * @property label
@@ -29,7 +29,7 @@ export default Component.extend({
    */
   label: null,
 
-  /**
+  /*
    * Component to render for the label
    *
    * @property labelComponent
@@ -39,7 +39,7 @@ export default Component.extend({
    */
   labelComponent: null,
 
-  /**
+  /*
    * Flag to hide the label
    *
    * @property labelHidden

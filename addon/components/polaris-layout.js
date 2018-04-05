@@ -9,7 +9,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Automatically adds sections to layout
    *
    * @property sectioned
@@ -18,7 +18,7 @@ export default Component.extend({
    */
   sectioned: false,
 
-  /**
+  /*
    * The content to display inside the layout
    *
    * This component can be used in block form,

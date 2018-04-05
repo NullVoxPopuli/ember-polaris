@@ -11,7 +11,7 @@ const allowedSizes = [
 ];
 const defaultSize = 'medium';
 
-/**
+/*
  * Polaris thumbnail component.
  * See https://polaris.shopify.com/components/images-and-icons/thumbnail
  */
@@ -22,7 +22,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Size of thumbnail
    *
    * @public
@@ -32,7 +32,7 @@ export default Component.extend({
    */
   size: defaultSize,
 
-  /**
+  /*
    * URL for the image
    *
    * @public
@@ -42,7 +42,7 @@ export default Component.extend({
    */
   source: null,
 
-  /**
+  /*
    * Alt text for the thumbnail image
    *
    * @public

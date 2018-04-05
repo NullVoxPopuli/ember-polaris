@@ -15,7 +15,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The action to render. The following properties can be set:
    *  - text
    *  - icon

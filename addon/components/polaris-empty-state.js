@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-empty-state';
 
-/**
+/*
  * Polaris empty state component.
  * See https://polaris.shopify.com/components/structure/empty-state
  */
@@ -11,7 +11,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The empty state heading
    *
    * @property heading
@@ -20,7 +20,7 @@ export default Component.extend({
    */
   heading: null,
 
-  /**
+  /*
    * The image to use for small screens
    *
    * @property image
@@ -29,7 +29,7 @@ export default Component.extend({
    */
   image: null,
 
-  /**
+  /*
    * The image to use for large screens
    *
    * @property largeImage
@@ -39,7 +39,7 @@ export default Component.extend({
    */
   largeImage: null,
 
-  /**
+  /*
    * The image to use for large screens
    *
    * @property imageContained
@@ -48,7 +48,7 @@ export default Component.extend({
    */
   imageContained: false,
 
-  /**
+  /*
    * Elements to display inside empty state
    *
    * This component can be used in block form,
@@ -61,7 +61,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Primary action for empty state
    *
    * @property action
@@ -70,7 +70,7 @@ export default Component.extend({
    */
   action: null,
 
-  /**
+  /*
    * Secondary action for empty state
    *
    * @property secondaryAction

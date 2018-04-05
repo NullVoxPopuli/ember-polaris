@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-form-layout';
 
-/**
+/*
  * Polaris form layout component.
  * See https://polaris.shopify.com/components/forms/form-layout
  */
@@ -13,7 +13,7 @@ export default Component.extend({
  /*
   * Public attributes.
   */
- /**
+ /*
   * The content to display inside the layout
   *
   * @property text
@@ -22,7 +22,7 @@ export default Component.extend({
   */
  text: null,
 
- /**
+ /*
   * Lifecycle hooks.
   */
  didRender() {

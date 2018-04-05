@@ -9,7 +9,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Title for the section
    *
    * @property title
@@ -18,7 +18,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Inner content of the section
    *
    * This component can be used in block form,

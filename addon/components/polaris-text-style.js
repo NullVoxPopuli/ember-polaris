@@ -4,7 +4,7 @@ import { isEmpty } from '@ember/utils';
 import { classify } from '@ember/string';
 import layout from '../templates/components/polaris-text-style';
 
-/**
+/*
  * Polaris text style component (undocumented).
  */
 export default Component.extend({
@@ -13,7 +13,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Give text additional visual meaning
    *
    * Possible values: positive, negative, strong, subdued
@@ -25,7 +25,7 @@ export default Component.extend({
    */
   variation: null,
 
-  /**
+  /*
    * The content that should get the intended styling
    *
    * This component can be used in block form,

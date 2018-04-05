@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 import { htmlSafe } from '@ember/string';
 import layout from '../templates/components/polaris-popover';
 
-/**
+/*
  * Polaris popover component.
  * See https://polaris.shopify.com/components/overlays/popover
  */
@@ -15,7 +15,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The content to display inside the popover
    *
    * This component can be used in block form,
@@ -28,7 +28,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * The preferred direction to open the popover
    *
    * @property preferredPosition
@@ -38,7 +38,7 @@ export default Component.extend({
    */
   preferredPosition: null,
 
-  /**
+  /*
    * Show or hide the Popover
    *
    * @property active
@@ -48,7 +48,7 @@ export default Component.extend({
    */
   active: false,
 
-  /**
+  /*
    * The element type to wrap the activator with
    *
    * @property activatorWrapper
@@ -58,7 +58,7 @@ export default Component.extend({
    */
   activatorWrapper: null,
 
-  /**
+  /*
    * Prevent automatic focus of the first field on activation
    *
    * @property preventAutofocus
@@ -68,7 +68,7 @@ export default Component.extend({
    */
   preventAutofocus: false,
 
-  /**
+  /*
    * Automatically add wrap content in a section
    *
    * @property sectioned
@@ -77,7 +77,7 @@ export default Component.extend({
    */
   sectioned: false,
 
-  /**
+  /*
    * Callback when popover is closed
    *
    * @property onClose

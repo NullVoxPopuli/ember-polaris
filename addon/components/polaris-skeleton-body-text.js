@@ -9,7 +9,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Number of lines to display
    *
    * @property lines
@@ -19,7 +19,7 @@ export default Component.extend({
    */
   lines: defaultLines,
 
-  /**
+  /*
    * Array of dummy lines to iterate over in template
    *
    * @property dummyLines

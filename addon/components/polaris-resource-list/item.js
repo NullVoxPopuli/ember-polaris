@@ -11,7 +11,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Item to render.
    * Available properties:
    *  url - TODO

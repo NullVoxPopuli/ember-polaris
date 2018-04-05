@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-visually-hidden';
 
-/**
+/*
  * Polaris VisuallyHidden component.
  * See https://polaris.shopify.com/components/titles-and-text/visuallyhidden
  */
@@ -14,7 +14,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The content to be hidden visually
    *
    * This component can be used in block form,

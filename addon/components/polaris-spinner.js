@@ -25,7 +25,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Color of spinner
    *
    * @property color
@@ -35,7 +35,7 @@ export default Component.extend({
    */
   color: defaultColor,
 
-  /**
+  /*
    * Size of spinner
    *
    * @property size
@@ -45,7 +45,7 @@ export default Component.extend({
    */
   size: defaultSize,
 
-  /**
+  /*
    * Accessible label for the spinner
    *
    * @property accessibilityLabel
@@ -55,7 +55,7 @@ export default Component.extend({
    */
   accessibilityLabel: null,
 
-  /**
+  /*
    * Internal properties.
    */
   normalizedColor: computed('color', function() {

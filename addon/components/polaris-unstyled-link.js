@@ -17,7 +17,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The url to link to.
    *
    * @property url
@@ -26,7 +26,7 @@ export default Component.extend({
    */
   url: null,
 
-  /**
+  /*
    * The content to display inside link
    *
    * @property text
@@ -35,7 +35,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Use for a links that open a different site
    *
    * @property external
@@ -44,7 +44,7 @@ export default Component.extend({
    */
   external: false,
 
-  /**
+  /*
    * Callback when a link is clicked
    *
    * @property onClick
@@ -66,7 +66,7 @@ export default Component.extend({
     return this.get('external') ? 'noopener noreferrer' : null;
   }).readOnly(),
 
-  /**
+  /*
    * Action handlers.
    */
   click: mapEventToAction('onClick', { preventDefault: false, stopPropagation: true }),

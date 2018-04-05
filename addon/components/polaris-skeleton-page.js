@@ -13,7 +13,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Page title, in large type
    *
    * @property title
@@ -23,7 +23,7 @@ export default Component.extend({
    */
   title: '',
 
-  /**
+  /*
    * Remove the normal max-width on the page
    *
    * @property fullwidth
@@ -33,7 +33,7 @@ export default Component.extend({
    */
   fullwidth: false,
 
-  /**
+  /*
    * Number of secondary page-level actions to display
    *
    * @property secondaryActions
@@ -43,7 +43,7 @@ export default Component.extend({
    */
   secondaryActions: null,
 
-  /**
+  /*
    * Shows a skeleton over the breadcrumb
    *
    * @property breadcrumbs
@@ -53,7 +53,7 @@ export default Component.extend({
    */
   breadcrumbs: null,
 
-  /**
+  /*
    * The contents of the page
    *
    * This component can be used in block form,
@@ -67,7 +67,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * The role of this component, for accessibility purposes
    *
    * @property role
@@ -76,7 +76,7 @@ export default Component.extend({
    */
   role: 'status',
 
-  /**
+  /*
    * The accessibility label of this component
    *
    * @property ariaLabel
@@ -85,7 +85,7 @@ export default Component.extend({
    */
   ariaLabel: 'Page loading',
 
-  /**
+  /*
    * Whether the page should display any kind of title
    *
    * @property hasTitle
@@ -96,7 +96,7 @@ export default Component.extend({
     return this.get('title') !== null;
   }).readOnly(),
 
-  /**
+  /*
    * Whether the page has an actual text title to display
    *
    * @property hasTitleText
@@ -105,7 +105,7 @@ export default Component.extend({
    */
   hasTitleText: notEmpty('title').readOnly(),
 
-  /**
+  /*
    * Array of dummy secondary actions to iterate over in template
    *
    * @property dummySecondaryActions

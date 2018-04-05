@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-callout-card';
 
-/**
+/*
  * Polaris callout card component.
  * See https://polaris.shopify.com/components/structure/callout-card
  */
@@ -10,7 +10,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The content to display inside the callout card.
    *
    * This component can be used in block form,
@@ -23,7 +23,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * The title of the card
    *
    * @property title
@@ -32,7 +32,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * URL to the card illustration
    *
    * @property illustration
@@ -41,7 +41,7 @@ export default Component.extend({
    */
   illustration: null,
 
-  /**
+  /*
    * Primary action for the card
    *
    * @property primaryAction
@@ -50,7 +50,7 @@ export default Component.extend({
    */
   primaryAction: null,
 
-  /**
+  /*
    * Secondary action for the card
    *
    * @property secondaryAction

@@ -14,7 +14,7 @@ export default Component.extend({
   classNames: ['Polaris-SkeletonDisplayText__DisplayText'],
   classNameBindings: ['sizeClass'],
 
-  /**
+  /*
    * Size of the text
    *
    * @property size
@@ -24,7 +24,7 @@ export default Component.extend({
    */
   size: defaultSize,
 
-  /**
+  /*
    * Class name to set the display text size.
    *
    * @property sizeClass

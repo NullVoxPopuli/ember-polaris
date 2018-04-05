@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-subheading';
 
-/**
+/*
  * Polaris subheading component.
  * See https://polaris.shopify.com/components/titles-and-text/subheading
  *
@@ -25,7 +25,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The content to display inside the heading
    *
    * This component can be used in block form,
@@ -38,12 +38,12 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Internal properties.
    */
   ariaLabel: null,
 
-  /**
+  /*
    * Lifecycle hooks.
    */
   didRender() {

@@ -10,7 +10,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Elements to display inside group item
    *
    * @property text
@@ -19,7 +19,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Condensed field group
    *
    * @property condensed
@@ -33,7 +33,7 @@ export default Component.extend({
    */
    role: 'group',
 
-   /**
+   /*
     * Lifecycle hooks.
     */
    didRender() {

@@ -6,7 +6,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The empty state heading
    *
    * @property heading
@@ -15,7 +15,7 @@ export default Component.extend({
    */
   heading: null,
 
-  /**
+  /*
    * Elements to display inside empty state
    *
    * This component can be used in block form,
@@ -28,7 +28,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Primary action for empty state
    *
    * @property action
@@ -37,7 +37,7 @@ export default Component.extend({
    */
   action: null,
 
-  /**
+  /*
    * Secondary action for empty state
    *
    * @property secondaryAction

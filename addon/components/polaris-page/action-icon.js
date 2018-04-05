@@ -7,7 +7,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The icon to display
    *
    * @property icon

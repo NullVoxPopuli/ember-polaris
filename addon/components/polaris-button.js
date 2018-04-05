@@ -5,7 +5,7 @@ import { isPresent, isBlank, isNone } from '@ember/utils';
 import { handleMouseUpByBlurring } from '../utils/focus';
 import layout from '../templates/components/polaris-button';
 
-/**
+/*
  * Polaris button component.
  * See https://polaris.shopify.com/components/actions/button
  */
@@ -17,7 +17,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The content to display inside the button
    *
    * This component can be used in block form,
@@ -31,7 +31,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * URL to link to
    *
    * @property url
@@ -41,7 +41,7 @@ export default Component.extend({
    */
   url: null,
 
-  /**
+  /*
    * Display as primary button
    *
    * @property primary
@@ -51,7 +51,7 @@ export default Component.extend({
    */
   primary: false,
 
-  /**
+  /*
    * Display as destructive button
    *
    * @property destructive
@@ -61,7 +61,7 @@ export default Component.extend({
    */
   destructive: false,
 
-  /**
+  /*
    * Disable button
    *
    * @property disabled
@@ -71,7 +71,7 @@ export default Component.extend({
    */
   disabled: false,
 
-  /**
+  /*
    * 	Replaces button text with a spinner while a background action is being performed
    *
    * @property loading
@@ -81,7 +81,7 @@ export default Component.extend({
    */
   loading: false,
 
-  /**
+  /*
    * Change the size of the button
    *
    * @property size
@@ -91,7 +91,7 @@ export default Component.extend({
    */
   size: null,
 
-  /**
+  /*
    * Display an outlined button
    *
    * @property outline
@@ -101,7 +101,7 @@ export default Component.extend({
    */
   outline: false,
 
-  /**
+  /*
    * Display full width button
    *
    * @property fullWidth
@@ -111,7 +111,7 @@ export default Component.extend({
    */
   fullWidth: false,
 
-  /**
+  /*
    * Display button with a disclosure icon
    *
    * @property disclosure
@@ -121,7 +121,7 @@ export default Component.extend({
    */
   disclosure: false,
 
-  /**
+  /*
    * Button will submit a form
    *
    * @property submit
@@ -131,7 +131,7 @@ export default Component.extend({
    */
   submit: false,
 
-  /**
+  /*
    * Use plain button style
    *
    * @property plain
@@ -141,7 +141,7 @@ export default Component.extend({
    */
   plain: false,
 
-  /**
+  /*
    * Force url to open in a new tab
    *
    * @property external
@@ -151,7 +151,7 @@ export default Component.extend({
    */
   external: false,
 
-  /**
+  /*
    * Icon to display to the left of the button content
    *
    * @property icon
@@ -161,7 +161,7 @@ export default Component.extend({
    */
   icon: null,
 
-  /**
+  /*
    * Visually hidden text for screen readers
    *
    * @property accessibilityLabel
@@ -171,7 +171,7 @@ export default Component.extend({
    */
   accessibilityLabel: null,
 
-  /**
+  /*
    * ID of the element this button reveals
    *
    * @property ariaControls
@@ -181,7 +181,7 @@ export default Component.extend({
    */
   ariaControls: null,
 
-  /**
+  /*
    * Whether the content revealed by this button is visible
    *
    * @property ariaExpanded
@@ -191,7 +191,7 @@ export default Component.extend({
    */
   ariaExpanded: null,
 
-  /**
+  /*
    * Callback when clicked
    *
    * @property onClick
@@ -201,7 +201,7 @@ export default Component.extend({
    */
   onClick: null,
 
-  /**
+  /*
    * Callback when button becomes focussed
    *
    * @property onFocus
@@ -211,7 +211,7 @@ export default Component.extend({
    */
   onFocus: null,
 
-  /**
+  /*
    * Callback when focus leaves button
    *
    * @property onBlur
@@ -221,7 +221,7 @@ export default Component.extend({
    */
   onBlur: null,
 
-  /**
+  /*
    * Computed properties.
    */
   isDisabled: or('disabled', 'loading').readOnly(),

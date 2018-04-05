@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { invokeAction } from 'ember-invoke-action';
 import layout from '../templates/components/polaris-setting-toggle';
 
-/**
+/*
  * Polaris setting toggle component.
  * See https://polaris.shopify.com/components/actions/setting-toggle
  */
@@ -15,7 +15,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Inner content of the card
    *
    * This component can be used in block form,
@@ -28,7 +28,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Card header action
    *
    * @property action
@@ -37,7 +37,7 @@ export default Component.extend({
   */
   action: null,
 
-  /**
+  /*
    * Sets toggle state to enabled or disabled
    *
    * @property enabled

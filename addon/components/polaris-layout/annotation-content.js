@@ -9,7 +9,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Inner content of the section
    *
    * This component can be used in block form,

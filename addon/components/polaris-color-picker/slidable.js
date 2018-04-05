@@ -27,7 +27,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The current x position of the dragger
    *
    * @property draggerX
@@ -36,7 +36,7 @@ export default Component.extend({
    */
   draggerX: 0,
 
-  /**
+  /*
    * The current y position of the dragger
    *
    * @property draggerY
@@ -45,7 +45,7 @@ export default Component.extend({
    */
   draggerY: 0,
 
-  /**
+  /*
    * Callback for the outside world to receive the height of the dragger
    *
    * @property onDraggerHeightChanged

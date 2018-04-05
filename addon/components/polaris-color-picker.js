@@ -6,7 +6,7 @@ import layout from '../templates/components/polaris-color-picker';
 import { clamp } from '../utils/math';
 import { hsbaToRgba } from '../utils/color';
 
-/**
+/*
  * Polaris color picker component.
  * See https://polaris.shopify.com/components/forms/color-picker
  */
@@ -18,7 +18,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The currently selected color
    *
    * @property color
@@ -27,7 +27,7 @@ export default Component.extend({
    */
   color: null,
 
-  /**
+  /*
    * Allow user to select an alpha value
    *
    * @property allowAlpha
@@ -36,7 +36,7 @@ export default Component.extend({
    */
   allowAlpha: false,
 
-  /**
+  /*
    * Callback when color is selected
    *
    * @property onChange

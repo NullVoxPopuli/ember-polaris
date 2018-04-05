@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-card';
 
-/**
+/*
  * Polaris card component.
  * See https://polaris.shopify.com/components/structure/card
  */
@@ -16,7 +16,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Title content for the card
    *
    * @property title
@@ -25,7 +25,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Inner content of the card
    *
    * This component can be used in block form,
@@ -38,7 +38,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * A less prominent card
    *
    * @property subdued
@@ -47,7 +47,7 @@ export default Component.extend({
    */
   subdued: false,
 
-  /**
+  /*
    * Auto wrap content in section
    *
    * @property sectioned
@@ -56,7 +56,7 @@ export default Component.extend({
    */
   sectioned: false,
 
-  /**
+  /*
    * Card header actions
    *
    * @property headerActions
@@ -65,7 +65,7 @@ export default Component.extend({
    */
   headerActions: null,
 
-  /**
+  /*
    * Primary action in the card footer
    *
    * @property primaryFooterAction
@@ -75,7 +75,7 @@ export default Component.extend({
    */
   primaryFooterAction: null,
 
-  /**
+  /*
    * Secondary action in the card footer
    *
    * @property secondaryFooterAction

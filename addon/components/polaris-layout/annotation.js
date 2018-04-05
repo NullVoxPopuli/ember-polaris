@@ -9,7 +9,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Title for the section
    *
    * @property title
@@ -18,7 +18,7 @@ export default Component.extend({
    */
   title: null,
 
-  /**
+  /*
    * Description for the section
    *
    * @property description

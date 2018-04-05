@@ -7,7 +7,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The content to use as a graph label or timestamp.
    *
    * This component can be used in block form,

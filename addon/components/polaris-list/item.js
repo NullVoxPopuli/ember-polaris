@@ -7,7 +7,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The content to display for this list item
    *
    * This component can be used in block form,

@@ -21,7 +21,7 @@ export default BaseComponent.extend({
     return this.get('external') ? 'noopener noreferrer' : null;
   }).readOnly(),
 
-  /**
+  /*
    * Action handlers.
    */
   //  Allow click to perform its default action.

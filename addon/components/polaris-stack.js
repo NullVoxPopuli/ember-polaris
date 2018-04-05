@@ -5,7 +5,7 @@ import { isBlank } from '@ember/utils';
 import { classify } from '@ember/string';
 import layout from '../templates/components/polaris-stack';
 
-/**
+/*
  * Polaris stack component.
  * See https://polaris.shopify.com/components/structure/stack
  */
@@ -21,7 +21,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Elements to display inside stack
    *
    * @property text
@@ -31,7 +31,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Stack the elements vertically
    *
    * @property vertical
@@ -41,7 +41,7 @@ export default Component.extend({
    */
   vertical: false,
 
-  /**
+  /*
    * Adjust spacing between elements
    *
    * @property spacing
@@ -51,7 +51,7 @@ export default Component.extend({
    */
   spacing: null,
 
-  /**
+  /*
    * Adjust alignment of elements
    *
    * @property alignment
@@ -61,7 +61,7 @@ export default Component.extend({
    */
   alignment: null,
 
-  /**
+  /*
    * Adjust distribution of elements
    *
    * @property distribution
@@ -71,7 +71,7 @@ export default Component.extend({
    */
   distribution: 'baseline',
 
-  /**
+  /*
    * Wrap stack elements to additional rows as needed on small screens (Defaults to true)
    *
    * @property wrap
@@ -113,7 +113,7 @@ export default Component.extend({
     return `Polaris-Stack--distribution${classify(distribution)}`;
   }).readOnly(),
 
-  /**
+  /*
   * Lifecycle hooks.
   */
   didRender() {

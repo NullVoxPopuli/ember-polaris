@@ -25,7 +25,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The current hue value
    *
    * @property hue
@@ -34,7 +34,7 @@ export default Component.extend({
    */
   hue: 0,
 
-  /**
+  /*
    * Callback when hue is changed
    *
    * @property onChange

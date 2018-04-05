@@ -8,19 +8,23 @@ import layout from '../templates/components/polaris-action-list';
 
 /**
  * Polaris action list component.
- * See https://polaris.shopify.com/components/actions/action-list
+ * See [https://polaris.shopify.com/components/actions/action-list](https://polaris.shopify.com/components/actions/action-list).
+ *
+ * @class polaris-action-list
+ * @public
  */
 export default Component.extend({
   tagName: '',
 
   layout,
+
   /**
    * Collection of actions for list
    *
    * @property items
-   * @public
    * @type {Array}
    * @default null
+   * @public
    */
   items: null,
 
@@ -28,9 +32,9 @@ export default Component.extend({
    * Collection of sectioned action items
    *
    * @property sections
-   * @public
    * @type {Array}
    * @default null
+   * @public
    */
   sections: null,
 
@@ -38,14 +42,18 @@ export default Component.extend({
    * Callback when any item is clicked or keypressed
    *
    * @property onActionAnyItem
-   * @public
    * @type {function}
    * @default no-op
+   * @public
    */
   onActionAnyItem() {},
 
-  /*
-   * Internal properties.
+  /**
+   * Computed list of sections to render.
+   *
+   * @property finalSections
+   * @type {Array}
+   * @private
    */
   finalSections: computed('items', 'sections.[]', function() {
     let finalSections = [];
@@ -62,5 +70,12 @@ export default Component.extend({
     return finalSections;
   }).readOnly(),
 
+  /**
+   * Whether the action list has more than one section.
+   *
+   * @property hasMultipleSections
+   * @type {boolean}
+   * @private
+   */
   hasMultipleSections: gt('finalSections.length', 1).readOnly(),
 });

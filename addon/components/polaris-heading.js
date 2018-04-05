@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-heading';
 
-/**
+/*
  * Polaris heading component.
  * See https://polaris.shopify.com/components/titles-and-text/heading
  *
@@ -24,7 +24,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The content to display inside the heading
    *
    * This component can be used in block form,

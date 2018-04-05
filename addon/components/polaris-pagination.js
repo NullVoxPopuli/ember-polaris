@@ -11,7 +11,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * A more subdued control for use in headers
    *
    * @property plain
@@ -20,7 +20,7 @@ export default Component.extend({
    */
   plain: false,
 
-  /**
+  /*
    * The URL of the next page
    *
    * @property nextUrl
@@ -30,7 +30,7 @@ export default Component.extend({
    */
   nextUrl: null,
 
-  /**
+  /*
    * The URL of the previous page
    *
    * @property previousUrl
@@ -40,7 +40,7 @@ export default Component.extend({
    */
   previousUrl: null,
 
-  /**
+  /*
    * Whether there is a next page to show
    *
    * @property hasNext
@@ -49,7 +49,7 @@ export default Component.extend({
    */
   hasNext: false,
 
-  /**
+  /*
    * Whether there is a previous page to show
    *
    * @property hasPrevious
@@ -58,7 +58,7 @@ export default Component.extend({
    */
   hasPrevious: false,
 
-  /**
+  /*
    * Visually hidden text for screen readers
    *
    * @property accessibilityLabel
@@ -67,7 +67,7 @@ export default Component.extend({
    */
   accessibilityLabel: 'Pagination',
 
-  /**
+  /*
    * Callback when next button is clicked
    *
    * @property onNext
@@ -76,7 +76,7 @@ export default Component.extend({
    */
   onNext() {},
 
-  /**
+  /*
    * Callback when previous button is clicked
    *
    * @property onPrevious

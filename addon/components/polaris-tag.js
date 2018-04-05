@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import layout from '../templates/components/polaris-tag';
 import { handleMouseUpByBlurring } from '../utils/focus';
 
-/**
+/*
  * Polaris tag component.
  * See https://polaris.shopify.com/components/forms/tag
  */
@@ -12,7 +12,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * The content to display inside the tag.
    *
    * This component can be used in block form,
@@ -26,7 +26,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    *  Callback when tag is removed
    *
    * @property onRemove

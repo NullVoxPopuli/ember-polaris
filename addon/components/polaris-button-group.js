@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-button-group';
 
-/**
+/*
  * Polaris button group component.
  * See https://polaris.shopify.com/components/actions/button-group
  */
@@ -14,7 +14,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Button components
    *
    * This component can be used in block form,
@@ -27,7 +27,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Join buttons as segmented group
    *
    * @property segmented
@@ -36,7 +36,7 @@ export default Component.extend({
    */
   segmented: false,
 
-  /**
+  /*
    * Lifecycle hooks.
    */
   didRender() {

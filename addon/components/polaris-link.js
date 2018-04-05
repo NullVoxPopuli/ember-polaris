@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import layout from '../templates/components/polaris-link';
 
-/**
+/*
  * Polaris link component.
  * See https://polaris.shopify.com/components/navigation/link
  */
@@ -15,7 +15,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The url to link to.
    *
    * @property url
@@ -24,7 +24,7 @@ export default Component.extend({
    */
   url: null,
 
-  /**
+  /*
    * The content to display inside link
    *
    * @property text
@@ -33,7 +33,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Use for a links that open a different site
    *
    * @property external
@@ -42,7 +42,7 @@ export default Component.extend({
    */
   external: false,
 
-  /**
+  /*
    * Callback when a link is clicked
    *
    * @property onClick

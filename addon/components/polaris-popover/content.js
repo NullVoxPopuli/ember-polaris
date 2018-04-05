@@ -11,7 +11,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Automatically add wrap content in a section
    *
    * @property sectioned
@@ -20,7 +20,7 @@ export default Component.extend({
    */
   sectioned: false,
 
-  /**
+  /*
    * Content wrapper component.
    *
    * @property contentComponent
@@ -29,7 +29,7 @@ export default Component.extend({
    */
   contentComponent: null,
 
-  /**
+  /*
    * Simple text for quick popovers.
    *
    * This component can be used in block form,
@@ -42,7 +42,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * `ember-basic-dropdown`'s generated ID, used to look up
    *
    * @property uniqueId

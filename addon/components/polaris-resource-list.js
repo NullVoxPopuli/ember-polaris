@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import layout from '../templates/components/polaris-resource-list';
 
-/**
+/*
  * Polaris resource list component.
  * See https://polaris.shopify.com/components/lists/resource-list
  */
@@ -14,7 +14,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * Item data; each item is rendered using the itemComponent below
    *
    * @property items
@@ -23,7 +23,7 @@ export default Component.extend({
    */
   items: null,
 
-  /**
+  /*
    * Component to render each item
    *
    * @property itemComponent

@@ -27,7 +27,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The current alpha value
    *
    * @property alpha

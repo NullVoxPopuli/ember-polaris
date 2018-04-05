@@ -18,7 +18,7 @@ const STATUS_LABELS = {
   attention: 'Attention',
 };
 
-/**
+/*
  * Polaris badge component.
  * See https://polaris.shopify.com/components/images-and-icons/badge
  */
@@ -32,7 +32,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The content to display inside the badge.
    *
    * This component can be used in block form,
@@ -45,7 +45,7 @@ export default Component.extend({
    */
   text: null,
 
-  /**
+  /*
    * Render a pip showing the progress of a given task.
    *
    * @property progress
@@ -54,7 +54,7 @@ export default Component.extend({
    */
   progress: null,
 
-  /**
+  /*
    * Set the color of the badge for the given status.
    *
    * @property status

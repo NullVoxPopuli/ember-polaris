@@ -5,7 +5,7 @@ import { typeOf } from '@ember/utils';
 import { equal } from '@ember/object/computed';
 import layout from '../templates/components/polaris-checkbox';
 
-/**
+/*
  * Polaris checkbox component.
  * See https://polaris.shopify.com/components/forms/checkbox
  */
@@ -15,7 +15,7 @@ export default Component.extend({
 
   layout,
 
-  /**
+  /*
    * Label for the checkbox
    *
    * @property label
@@ -25,7 +25,7 @@ export default Component.extend({
    */
   label: null,
 
-  /**
+  /*
    * Component to render for the checkbox's label
    *
    * @property labelComponent
@@ -35,7 +35,7 @@ export default Component.extend({
    */
   labelComponent: null,
 
-  /**
+  /*
    * Visually hide the label
    *
    * @property labelHidden
@@ -45,7 +45,7 @@ export default Component.extend({
    */
   labelHidden: false,
 
-  /**
+  /*
    * Checkbox is selected. `indeterminate` shows a horizontal line in the checkbox
    *
    * @property checked
@@ -55,7 +55,7 @@ export default Component.extend({
    */
   checked: false,
 
-  /**
+  /*
    * Additional text to aide in use
    *
    * @property helpText
@@ -65,7 +65,7 @@ export default Component.extend({
    */
   helpText: null,
 
-  /**
+  /*
    * ID for form input
    *
    * @property inputId
@@ -75,7 +75,7 @@ export default Component.extend({
    */
   inputId: null,
 
-  /**
+  /*
    * Name for form input
    *
    * @property name
@@ -85,7 +85,7 @@ export default Component.extend({
    */
   name: null,
 
-  /**
+  /*
    * Value for form input
    *
    * @property value
@@ -95,7 +95,7 @@ export default Component.extend({
    */
   value: null,
 
-  /**
+  /*
    * Display an error state
    *
    * @property error
@@ -105,7 +105,7 @@ export default Component.extend({
    */
   error: null,
 
-  /**
+  /*
    * Disable the checkbox
    *
    * @property disabled
@@ -115,7 +115,7 @@ export default Component.extend({
    */
   disabled: false,
 
-  /**
+  /*
    * Callback when checkbox is toggled
    *
    * @property onChange
@@ -125,7 +125,7 @@ export default Component.extend({
    */
   onChange() {},
 
-  /**
+  /*
    * Callback when checkbox is focussed
    *
    * @property onFocus
@@ -135,7 +135,7 @@ export default Component.extend({
    */
   onFocus() {},
 
-  /**
+  /*
    * Callback when focus is removed
    *
    * @property onBlur

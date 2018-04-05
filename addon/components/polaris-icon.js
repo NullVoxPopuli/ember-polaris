@@ -22,7 +22,7 @@ export default Component.extend({
   /*
    * Public attributes.
    */
-  /**
+  /*
    * The SVG contents to display in the icon
    * If the source doesn't have a slash in the name, it will look for Polaris
    * icons in the namespace specified by `sourcePath` property.
@@ -33,7 +33,7 @@ export default Component.extend({
    */
   source: null,
 
-  /**
+  /*
    * Sets the color for the SVG fill
    *
    * @property color
@@ -42,7 +42,7 @@ export default Component.extend({
    */
   color: null,
 
-  /**
+  /*
    * Show a backdrop behind the icon
    *
    * @property backdrop
@@ -51,7 +51,7 @@ export default Component.extend({
    */
   backdrop: false,
 
-  /**
+  /*
    * Descriptive text to be read to screenreaders
    *
    * @property accessibilityLabel
@@ -60,7 +60,7 @@ export default Component.extend({
    */
   accessibilityLabel: null,
 
-  /**
+  /*
    * Path under which `ember-svg-jar` serves the Polaris SVG icons
    */
   sourcePath: 'polaris',
