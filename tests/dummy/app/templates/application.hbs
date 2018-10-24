@@ -1,3 +1,17 @@
+{{#with (component "polaris-card" sectioned=true text="This is a test card") as |testCard|}}
+  {{#polaris-layout as |layout|}}
+    {{#layout.section}}
+      {{testCard}}
+    {{/layout.section}}
+
+    {{#layout.section secondary}}
+      {{#polaris-sticky}}
+
+      {{/polaris-sticky}}
+    {{/layout.section}}
+  {{/polaris-layout}}
+{{/with}}
+
 {{outlet}}
 
 {{#unless hideMagicSection}}
