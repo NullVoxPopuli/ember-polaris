@@ -10,7 +10,7 @@ module.exports = {
   description: '',
 
   normalizeEntityName() {
-    // this prevents an error when the entityName is
+    // This prevents an error when the entityName is
     // not specified when running `ember g ember-polaris`
     // (since that doesn't actually matter to us)
   },

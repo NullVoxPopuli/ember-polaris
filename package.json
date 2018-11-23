@@ -100,6 +100,7 @@
     "loader.js": "^4.7.0",
     "precise-commits": "^1.0.2",
     "prettier": "^1.14.3",
+    "polaris": "Shopify/polaris-react#2.11.0",
     "qunit-dom": "^0.8.0"
   },
   "engines": {
@@ -107,5 +108,8 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "resolutions": {
+    "broccoli-debug": "^0.6.5"
   }
 }
