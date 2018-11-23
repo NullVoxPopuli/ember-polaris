@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { find, render, triggerEvent, settled } from '@ember/test-helpers';
+import { render, triggerEvent, settled } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { capitalize, htmlSafe } from '@ember/string';
 import { selectFiles } from 'ember-native-dom-helpers';
@@ -487,11 +487,13 @@ module('Integration | Component | polaris-drop-zone', function(hooks) {
         assert
           .dom(fileUploadImageSelector)
           .exists('fileUpload image is rendered');
-        assert.equal(
-          find(fileUploadImageSelector).dataset.iconSource,
-          'file-upload',
-          'fileUpload has correct image set'
-        );
+        assert
+          .dom(fileUploadImageSelector)
+          .hasAttribute(
+            'src',
+            '/assets/images/polaris/file-upload.svg',
+            'fileUpload has correct image set'
+          );
         assert
           .dom(fileUploadImageSelector)
           .hasClass(
@@ -508,11 +510,13 @@ module('Integration | Component | polaris-drop-zone', function(hooks) {
 
         this.set('type', 'image');
 
-        assert.equal(
-          find(fileUploadImageSelector).dataset.iconSource,
-          'image-upload',
-          'fileUpload has correct image set when image-type dropzone'
-        );
+        assert
+          .dom(fileUploadImageSelector)
+          .hasAttribute(
+            'src',
+            '/assets/images/polaris/image-upload.svg',
+            'fileUpload has correct image set when image-type dropzone'
+          );
         assert
           .dom(fileUploadImageSelector)
           .hasClass(
@@ -595,11 +599,13 @@ module('Integration | Component | polaris-drop-zone', function(hooks) {
         assert
           .dom(fileUploadImageSelector)
           .exists('fileUpload image is rendered');
-        assert.equal(
-          find(fileUploadImageSelector).dataset.iconSource,
-          'file-upload',
-          'fileUpload has correct image set'
-        );
+        assert
+          .dom(fileUploadImageSelector)
+          .hasAttribute(
+            'src',
+            '/assets/images/polaris/file-upload.svg',
+            'fileUpload has correct image set'
+          );
         assert
           .dom(fileUploadImageSelector)
           .hasClass(
@@ -622,11 +628,13 @@ module('Integration | Component | polaris-drop-zone', function(hooks) {
 
         this.set('type', 'image');
 
-        assert.equal(
-          find(fileUploadImageSelector).dataset.iconSource,
-          'image-upload',
-          'fileUpload has correct image set when image-type dropzone'
-        );
+        assert
+          .dom(fileUploadImageSelector)
+          .hasAttribute(
+            'src',
+            '/assets/images/polaris/image-upload.svg',
+            'fileUpload has correct image set  when image-type dropzone'
+          );
         assert
           .dom(fileUploadImageSelector)
           .hasClass(
