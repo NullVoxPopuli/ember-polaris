@@ -5,17 +5,15 @@ const resolve = require('resolve');
 const Funnel = require('broccoli-funnel');
 const MergeTrees = require('broccoli-merge-trees');
 const BroccoliDebug = require('broccoli-debug');
+const UnwatchedDir = require('broccoli-source').UnwatchedDir;
 
 module.exports = {
   name: require('./package').name,
 
   options: {
     svgJar: {
-      sourceDirs: [
-        'public',
-        'tests/dummy/public/assets/images/svg',
-        'node_modules/@smile-io/ember-polaris/public',
-      ],
+      stripPath: false,
+      sourceDirs: ['dist/assets/icons'],
     },
   },
 
@@ -29,80 +27,83 @@ module.exports = {
 
   included() {
     this._super.included.apply(this, arguments);
+    this._shopifyPolarisPackageNode = new UnwatchedDir(this._getPackageRoot());
   },
 
   treeForStyles(tree) {
     tree = this.debugTree(tree, 'tree-for-styles:input');
 
-    let packageRoot = path.dirname(
-      resolve.sync('@shopify/polaris/package.json', { basedir: __dirname })
+    let polarisScssFiles = new Funnel(
+      this._getPackageRoot('@shopify/polaris'),
+      {
+        include: ['styles.scss', 'styles/**/*'],
+        destDir: 'ember-polaris',
+        annotation: 'PolarisScssFunnel',
+      }
     );
-
-    let polarisScssFiles = Funnel(packageRoot, {
-      include: ['styles.scss', 'styles/**/*'],
-      srcDir: './',
-      destDir: 'ember-polaris',
-      annotation: 'PolarisScssFunnel',
-    });
     polarisScssFiles = this.debugTree(
       polarisScssFiles,
       'tree-for-styles:polarisScssFiles'
     );
 
-    return this._super.treeForStyles(
-      MergeTrees([polarisScssFiles, tree], { overwrite: true })
-    );
-    // _super = this.debugTree(_super, 'tree-for-styles:output');
+    let output = new MergeTrees([polarisScssFiles, tree]);
+    output = this.debugTree(output, 'tree-for-styles:output');
 
-    // return _super;
+    return this._super.treeForStyles(output);
   },
 
   treeForPublic() {
     let trees = [];
 
-    let packageRoot = path.dirname(
-      resolve.sync('polaris/package.json', { basedir: __dirname })
+    let icons = this._getTreeForPublic(
+      ['**/icons/*.svg'],
+      'assets/icons/polaris'
     );
-    trees.push(
-      Funnel(packageRoot, {
-        include: ['**/icons/*.svg'],
-        srcDir: 'src',
-        destDir: 'assets/icons/polaris',
-        getDestinationPath: function(relativePath) {
-          let parts = relativePath.split('/');
-          return parts[parts.length - 1];
-        },
-      })
-    );
-    trees.push(
-      Funnel(packageRoot, {
-        include: ['**/images/*.svg'],
-        srcDir: 'src',
-        destDir: 'assets/images/polaris',
-        getDestinationPath: function(relativePath) {
-          let parts = relativePath.split('/');
-          return parts[parts.length - 1];
-        },
-      })
-    );
-    trees.push(
-      Funnel(packageRoot, {
-        include: ['**/illustrations/*.svg'],
-        srcDir: 'src',
-        destDir: 'assets/illustrations/polaris',
-        getDestinationPath: function(relativePath) {
-          let parts = relativePath.split('/');
-          return parts[parts.length - 1];
-        },
-      })
-    );
+    icons = this.debugTree(icons, 'tree-for-public:icons');
+    trees.push(icons);
 
-    let newTree = new MergeTrees(trees);
+    let images = this._getTreeForPublic(
+      ['**/images/*.svg'],
+      'assets/images/polaris'
+    );
+    images = this.debugTree(images, 'tree-for-public:images');
+    trees.push(images);
 
-    return newTree;
+    let illustrations = this._getTreeForPublic(
+      ['**/illustrations/*.svg'],
+      'assets/illustrations/polaris'
+    );
+    illustrations = this.debugTree(
+      illustrations,
+      'tree-for-public:illustrations'
+    );
+    trees.push(illustrations);
+
+    let output = new MergeTrees(trees);
+    output = this.debugTree(output, 'tree-for-public:output');
+
+    return output;
   },
 
   isDevelopingAddon() {
     return process.env.SMILE_DEV;
+  },
+
+  _getPackageRoot(packageName = 'polaris-react') {
+    return path.dirname(
+      resolve.sync(`${packageName}/package.json`, { basedir: __dirname })
+    );
+  },
+
+  _getTreeForPublic(include, destDir) {
+    return new Funnel(this._shopifyPolarisPackageNode, {
+      srcDir: 'src',
+      include,
+      destDir,
+      getDestinationPath: function(relativePath) {
+        let parts = relativePath.split('/');
+        return parts[parts.length - 1];
+      },
+    });
   },
 };

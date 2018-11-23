@@ -16,12 +16,6 @@ module.exports = function(defaults) {
     sassOptions: {
       implementation: nodeSass,
     },
-
-    svgJar: {
-      strategy: 'inline',
-      stripPath: false,
-      sourceDirs: ['dist/assets/icons'],
-    },
   });
 
   /**

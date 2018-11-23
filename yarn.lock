@@ -9415,7 +9415,7 @@ pluralize@^7.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-polaris@Shopify/polaris-react#2.11.0:
+polaris-react@Shopify/polaris-react#2.11.0:
   version "2.11.0"
   resolved "https://codeload.github.com/Shopify/polaris-react/tar.gz/98803c6a3e0d09f9666bfe9be21eb71d6e760892"
   dependencies:
