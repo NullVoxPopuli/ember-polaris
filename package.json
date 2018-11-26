@@ -109,8 +109,5 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  },
-  "resolutions": {
-    "broccoli-debug": "^0.6.5"
   }
 }
